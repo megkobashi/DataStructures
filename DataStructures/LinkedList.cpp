@@ -1,12 +1,9 @@
 #include <iostream>
 #include <list>
 
-class Node {
-public:
-		Node();
-		Node(int data);
-		int data;
-		Node* next;
+struct Node {
+	int data;
+	Node* next;
 };
 
 class LinkedList {
@@ -31,9 +28,6 @@ LinkedList::LinkedList() : size(0), head(nullptr), tail(nullptr){}
 //LinkedList::LinkedList operator=() {
 
 //}
-
-Node::Node(int data) : data(data), next(nullptr) {}
-
 
 void LinkedList::appendToTail(int data) {
 	Node* element = new Node(data);
@@ -138,7 +132,6 @@ Node* LinkedList::get_at(int index) {
 int main() {
 	std::cout << "beginning main";
 
-	String[]
 //	LinkedList list;
 //	list.appendToTail(1);
 //	list.appendToTail(2);
